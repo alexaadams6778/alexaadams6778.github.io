@@ -6,3 +6,19 @@ h1 {
     color:antiquewhite;
     text-align: center;
 }  
+
+.about {
+    background:palevioletred;
+}
+
+.skills {
+    background:palegreen;
+}
+
+.projects {
+    background:paleturquoise;
+}
+
+.contact {
+    background:palegoldenrod;
+}
