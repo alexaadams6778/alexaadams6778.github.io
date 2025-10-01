@@ -9,16 +9,32 @@ h1 {
 
 .about {
     background:palevioletred;
+    h1 {
+    color:gray;
+    font-family:"Times New Roman", Times, serif;
+    }  
 }
 
 .skills {
     background:palegreen;
+    h1 {
+    color:gray;
+    font-family:"Times New Roman", Times, serif;
+    }  
 }
 
 .projects {
     background:paleturquoise;
+    h1 {
+    color:black;
+    font-family:"Times New Roman", Times, serif;
+    }  
 }
 
 .contact {
     background:palegoldenrod;
+    h1 {
+    color:gray;
+    font-family:"Times New Roman", Times, serif;
+    }  
 }
