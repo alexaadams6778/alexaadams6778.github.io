@@ -1,44 +1,62 @@
 body {
-    background: #E30590;
-    font-family:"Times New Roman", Times, serif;
+    background-color: #f7f7f7;
+    color: #333;
+    font-family: "Poppins", "Helvetica", sans-serif;
+    margin: 0;
+    padding: 0;
 }
-h1 {
-    color:antiquewhite;
+
+header {
+    background-color: #E30590;
+    color: white;
     text-align: center;
+    padding: 2rem 1rem;
 }  
 
-.about {
-    background:palevioletred;
-    h2 {
-    color:black;
-    font-family:"Times New Roman", Times, serif;
-    }  
+section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #E30590;
+    border-bottom: 2px solid #E30590;
+    display: inline-block;
+    padding-bottom: 0.3rem;
 }
 
 .skills {
-    background:palegreen;
-    h2 {
-    color:gray;
-    font-family:"Times New Roman", Times, serif;
-    }  
+    list-style: circle;
+    padding-left: 20px;
 }
 
 .projects { 
-    display:flex; flex-wrap:wrap; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
 }
 
 .project {
-    width: 30%;
-    margin: 10px;
-    padding: 20px 10px;
-    background: paleturquoise;
-    border-radius: 25%;
+    flex: 1 1 300px;
+    background: #f0faff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.project img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
 }
 
 .contact {
-    background:palegoldenrod;
-    h2 {
-    color:gray;
-    font-family:"Times New Roman", Times, serif;
-    }  
+    color: #E30590;
+    text-decoration: none;
 }
