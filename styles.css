@@ -37,32 +37,43 @@ h2 {
 .projects {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.projects h2 {
-    flex-basis: 100%; 
-    margin-bottom: 10px;
+    justify-content: center;
+    gap: 24px;
 }
 
 .project {
-    flex: 1 1 300px;
-    max-width: 360px; 
     background: #f0faff;
     border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
     text-align: center;
     padding: 1rem;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    width: 280px; /* consistent card width */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .project:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.project h3 {
+    margin: 0.5rem 0;
+    color: #1a1a1a;
+}
+
+.project p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #444;
 }
 
 .img-wrap {
