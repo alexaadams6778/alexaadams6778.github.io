@@ -5,14 +5,12 @@ body {
     margin: 0;
     padding: 0;
 }
-
 header {
     background-color: #E30590;
     color: white;
     text-align: center;
     padding: 2rem 1rem;
 }
-
 section {
     max-width: 900px;
     margin: 2rem auto;
@@ -21,98 +19,150 @@ section {
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 h2 {
     color: #E30590;
     border-bottom: 2px solid #E30590;
     display: inline-block;
     padding-bottom: 0.3rem;
 }
-
-.skills {
-    list-style: circle;
-    padding-left: 20px;
-}
-
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px;
-    align-items: flex-start;
-}
-
-.projects h2 {
-    margin-bottom: 20px;
-    display: inline-block;     /* underline only under text */
-    text-align: left;
-    align-self: flex-start;    /* place heading at the left of the flex container */
-    padding-bottom: 0.3rem;    /* keep same underline spacing */
+.projects-title {
+    color: #E30590;
+    margin: 0 0 1.25rem 0;
+    display: inline-block;
+    padding-bottom: 0.3rem;
     border-bottom: 2px solid #E30590;
+    width: auto;
 }
-
+.projects-container {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 28px;
+    align-items: start;
+}
+.left-column {
+    width: 100%;
+}
+.right-column {
+    width: 100%;
+}
+.highlighted-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: start;
+    margin-top: 1rem;
+}
+.github-title {
+    text-align: center;
+    color: #E30590;
+    font-size: 1.1rem;
+    margin: 0 0 0.75rem 0;
+    padding-bottom: 0.15rem;
+    border-bottom: 2px solid #E30590;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.github-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 0.5rem;
+    align-items: start;
+    grid-auto-rows: auto;
+}
 .project {
     background: #f0faff;
     border-radius: 10px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
     text-align: center;
     padding: 1rem;
-    width: 280px; /* consistent card width */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
 }
-
 .project:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
-
-.project img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: contain;
-    border-radius: 8px;
-    margin-bottom: 0.75rem;
-}
-
-.project h3 {
-    margin: 0.5rem 0;
-    color: #1a1a1a;
-}
-
-.project p {
-    margin: 0;
-    font-size: 0.95rem;
-    color: #444;
-}
-
 .img-wrap {
     width: 100%;
-    height: 200px;  
+    height: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; 
-    background: #fff;   
+    overflow: hidden;
+    background: #fff;
     border-radius: 8px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     box-sizing: border-box;
-    padding: 8px;   
+    padding: 8px;
 }
-
 .img-wrap img {
     max-width: 100%;
     max-height: 100%;
     height: auto;
     width: auto;
-    object-fit: contain;  
+    object-fit: contain;
     display: block;
 }
-
-.contact a {
-    color: #E30590;
-    text-decoration: none;
+.project h3,
+.project h4 {
+    margin: 0.4rem 0;
+    color: #1a1a1a;
+    font-size: 1.05rem;
+    line-height: 1.2;
+    word-break: break-word;
+    text-align: center;
 }
-.contact a:hover {
-    text-decoration: underline;
+.project p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 0;
+    word-break: break-word;
+}
+.project a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+@media (max-width: 1000px) {
+    .projects-container {
+        grid-template-columns: 1fr 360px;
+    }
+    .highlighted-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 780px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    .highlighted-grid {
+        grid-template-columns: 1fr;
+    }
+    .github-grid {
+        grid-template-columns: 1fr;
+    }
+    section {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    .img-wrap {
+        height: 120px;
+    }
+}
+@media (max-width: 480px) {
+    h2, .projects-title {
+        font-size: 1.05rem;
+    }
+    .github-title {
+        font-size: 1rem;
+    }
+    .img-wrap {
+        height: 100px;
+    }
 }
